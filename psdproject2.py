@@ -177,9 +177,9 @@ with processing:
     scaler.fit(X_train[non_binary_columns])
 
     # Save the scaler using pickle
-    scaler_file_path = r'C:\psd_project_2\scaler.pkl'
-    with open(scaler_file_path, 'wb') as scaler_file:
-        pickle.dump(scaler, scaler_file)
+    # scaler_file_path = r'C:\psd_project_2\scaler.pkl'
+    # with open(scaler_file_path, 'wb') as scaler_file:
+    #   pickle.dump(scaler, scaler_file)
 
     # Transformasi data pelatihan (hanya pada fitur non-biner)
     X_train_scaled = X_train.copy()
@@ -226,8 +226,8 @@ with processing:
 
     # Simpan model SVM ke dalam file pickle
     svm_model_file_path = 'svm_model.pkl'
-    with open(svm_model_file_path, 'wb') as svm_model_file:
-        pickle.dump(svm_model, svm_model_file)
+    # with open(svm_model_file_path, 'wb') as svm_model_file:
+    #    pickle.dump(svm_model, svm_model_file)
 
     # Memuat model SVM dari file pickle
     with open(svm_model_file_path, 'rb') as svm_model_file:
