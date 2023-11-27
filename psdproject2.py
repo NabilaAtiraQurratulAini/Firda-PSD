@@ -14,7 +14,7 @@ st.title("PREDIKSI PENYAKIT HEPATITIS C")
 st.write("Nama : Firdatul A'yuni")
 st.write('NIM : 2104111000144')
 st.write('Kelas: Proyek Sains Data A')
-data_hcv, explore, processing, prediksi  = st.tabs(["Deskripsi Dataset HCV", "Eksplorasi Data", "Processing Dataset", "Prediksi Hasil Lab Donor Darah"])
+data_hcv,  processing, prediksi  = st.tabs(["Deskripsi Dataset HCV", "Processing Dataset", "Prediksi Hasil Lab Donor Darah"])
 
 
 with data_hcv:
@@ -115,32 +115,6 @@ with data_hcv:
     st.write("### Source Aplikasi di Colaboratory :")
     st.write("https://colab.research.google.com/drive/1QBN0L3cBtQUtYJD_Z6blpn2oepPKCTbU?usp=sharing")
     
-with explore:
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-
-    # Load data
-    df = pd.read_csv('https://raw.githubusercontent.com/Firdatulayuni/PSData_A/main/hcv.csv')
-
-    # Statistik deskriptif
-    descriptive_stats = df.describe()
-    st.write("### Statistik Deskriptif: ###")
-    st.dataframe(descriptive_stats)
-
-   # Setel warna untuk setiap kelas
-    palette_colors = sns.color_palette("Set2", n_colors=5)
-
-    # Grafik distribusi kategori
-    plt.figure(figsize=(8, 6))
-    sns.countplot(x='Category', data=df, palette=palette_colors)
-    st.write('### Distribusi Kategori ###')
-    st.pyplot(plt)
-
-    # Grafik distribusi umur (Age) berdasarkan kategori
-    plt.figure(figsize=(10, 6))
-    sns.histplot(data=df, x='Age', hue='Category', kde=True, bins=20)
-    st.write('### Distribusi Umur berdasarkan Kategori ###')
-    st.pyplot(plt)
 with processing:
     st.write("### Dataset Preprocessing")
     st.write("Preprosesing pada data berikut adalah:")
