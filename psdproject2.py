@@ -5,7 +5,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
-from io import StringIO
 import pickle
 from pickle import dump
 from sklearn.svm import SVC
