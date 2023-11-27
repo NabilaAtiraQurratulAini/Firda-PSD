@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import pickle
 from pickle import dump
 from sklearn.svm import SVC
-from imblearn.over_sampling import RandomOverSampler
 
 st.title("PREDIKSI PENYAKIT HEPATITIS C")
 st.write("Nama : Firdatul A'yuni")
